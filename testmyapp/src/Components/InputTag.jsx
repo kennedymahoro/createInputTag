@@ -10,7 +10,7 @@ const InputTag = () => {
   return (
     <form onSubmit={handleSubmit}>
       <label>Enter a name:      
-        <input type='text' value={name} onChange{(e)=>{setName(e.target.value)}}/>
+        <input type='text' value={name} onChange{...(e)=>{setName(e.target.value)}}/>
       </label>
       <input type='submit' />
     </form>
