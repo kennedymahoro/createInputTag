@@ -3,16 +3,15 @@ import {useState} from "react"
 
 const InputTag = () => {
   const [name, setName] = useState();
-  const handleSubmit = (event) => {
-    event.preventDefualt()
-    alert(`The name you Entered was: ${name}`)
-  }
+  const log = () => {
+    alert(`Hello ${name}`)
+  } 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <label>Enter a name:      
         <input type='text' value={name} onChange{...(e)=>{setName(e.target.value)}}/>
       </label>
-      <input type='submit' />
+      <button onClick={log}>Submit</button>
     </form>
   )
 }
