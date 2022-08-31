@@ -1,18 +1,13 @@
-import {useState} from "react"
 
 
-const InputTag = () => {
-  const [name, setName] = useState();
-  const log = () => {
-    alert(`Hello ${name}`)
-  } 
+const InputTag = (props) => {
   return (
-    <form>
-      <label>Enter a name:      
-        <input type='text' value={name} onChange{...(e)=>{setName(e.target.value)}}/>
+    <div>
+      <label> {`Enter a ${props.lable}`}
+        <input type='text' value={props.name} onChange = {(e)=> props.setName(e)}/>
       </label>
-      <button onClick={log}>Submit</button>
-    </form>
+      <button onClick={props.log}>Submit</button>
+    </div>
   )
 }
 export default InputTag;
