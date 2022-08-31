@@ -2,7 +2,10 @@ import './App.css'
 import InputTag from "./Components/InputTag.jsx"
 function App() {
   return (
-    <InputTag />
+    <div>
+      <h1>Hello There?</h1>
+      <InputTag />
+    </div>
   )
 }
 
